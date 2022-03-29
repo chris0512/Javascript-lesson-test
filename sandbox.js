@@ -1,34 +1,17 @@
-const scores = [10, 20, 60, 40, 70, 90, 30];
+const scores = [10, 50, 20, 5, 35, 70, 45];
 
-// const result = scores.reduce((acc, curr)=>{
-//     if(curr > 50){
-//         acc++;
-//     }
-//     return acc;
-// }, 0);
+scores.sort((a,b)=> b - a);
 
-// console.log(result);
+console.log(scores);
 
-const score = [
-    {player: 'mario', score: 50},
-    {player: 'yoshi', score: 30},
-    {player: 'mario', score: 70},
-    {player: 'crystal', score: 60},
-    {player: 'mario', score: 90},
-    {player: 'yoshi', score: 30},
-    {player: 'mario', score: 70},
-    {player: 'crystal', score: 60},
-    {player: 'mario', score: 50},
-    {player: 'yoshi', score: 30},
-    {player: 'mario', score: 70},
-    {player: 'crystal', score: 60},
+
+const players = [
+    {name: 'mario', score:20},
+    {name: 'luigi', score:10},
+    {name: 'chun-li', score:50},
+    {name: 'yoshi', score:30},
+    {name: 'shaun', score:70}
 ];
 
-const maroiTotal = score.reduce((acc, curr) => {
-    if(curr.player === 'mario'){
-        acc += curr.score;
-    }
-    return acc;
-}, 0);
-
-console.log(maroiTotal);
+players.sort((a,b)=>b.score - a.score);
+console.log(players);
