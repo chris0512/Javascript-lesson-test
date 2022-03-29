@@ -1,17 +1,19 @@
-const scores = [10, 50, 20, 5, 35, 70, 45];
-
-scores.sort((a,b)=> b - a);
-
-console.log(scores);
-
-
-const players = [
-    {name: 'mario', score:20},
-    {name: 'luigi', score:10},
-    {name: 'chun-li', score:50},
-    {name: 'yoshi', score:30},
-    {name: 'shaun', score:70}
+const products = [
+    {name: 'gold star', price: 30},
+    {name: 'green shell', price: 10},
+    {name: 'red shell', price: 40},
+    {name: 'banana skin', price: 5},
+    {name: 'mushroom', price: 50}
 ];
 
-players.sort((a,b)=>b.score - a.score);
-console.log(players);
+// const filtered = products.filter(product => product.price > 20);
+//
+// const promos = filtered.map(product => {
+//     return `the ${product.name} is ${product.price/2} pounds`;
+// });
+
+const promos = products
+    .filter(product => product.price > 20)
+    .map(product => `the ${product.name} is ${product.price/2} pounds`);
+
+console.log(promos);
